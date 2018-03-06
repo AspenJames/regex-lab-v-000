@@ -14,9 +14,11 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
   text.match(/^[A-Z]/) && text.match(/.*[.?!]$/) ? true : false
 end
 
+## Method below was lengthy, but more exact 
 # def valid_phone_number?(phone)
 #   phone.match(/\d{3}\s?\d{3}\s?\d{4}/) || phone.match(/\(\d{3}\)\s?\d{7}/) || phone.match(/\(\d{3}\)\s?\d{3}-\d{4}/) ? true : false
 # end
+
 def valid_phone_number?(phone)
   phone.scan(/\d/).length == 10 ? true : false
 end
